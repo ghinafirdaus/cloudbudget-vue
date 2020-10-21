@@ -1,25 +1,25 @@
 <template>
     <div class="imgInsideSignupContainer">
     <div class="bgColorSignupContainer">
-    <b-container>
             <b-row id="navSectionWrapper">
-                <b-col id="logoWrapper"><h3>CloudBudget</h3></b-col>
+                <b-col id="logoWrapper">
+                    <h3><b-icon id="cloudLogo" font-scale="1.5" icon="cloud-fill" aria-hidden="true"></b-icon>CloudBudget</h3>
+                </b-col>
                 <b-col id="navbarWrapper">
-                    <div>
-                        <b-nav class="b-nav">
-                            <b-nav-item class="b-nav-item">Overview</b-nav-item>
-                            <b-nav-item class="b-nav-item">Features</b-nav-item>
-                            <b-nav-item class="b-nav-item">Technology</b-nav-item>
-                            <b-nav-item class="b-nav-item">Contact</b-nav-item>
-                            <b-nav-item class="b-nav-item">Sign Up</b-nav-item>
-                        </b-nav>
-                    </div>
+                        <ul id="navbarUl">
+                            <li><a href="#">Overview</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Technology</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Sign Up</a></li>
+                        </ul> 
                 </b-col>
                 <b-col id="langWrapper">
                     <div>
-                        <b-dropdown id="dropdown-1" text="EN">
-                            <b-dropdown-item active>EN</b-dropdown-item>
-                            <b-dropdown-item>ID</b-dropdown-item>
+                        <b-img id="langFlag" src="../assets/en.png" alt="en image"></b-img>
+                        <b-dropdown id="dropdown-1" text="EN" variant="outline-light" class="m-md-2">
+                            <b-dropdown-item active href="#">EN</b-dropdown-item>
+                            <b-dropdown-item href="#">ID</b-dropdown-item>
                         </b-dropdown>
                     </div>
                 </b-col>
@@ -38,26 +38,25 @@
             <b-row id="signupBtnWrapper">
                 <b-col><b-button id="signupBtn">Sign Up</b-button></b-col>
             </b-row>
-    </b-container>
     </div>
      </div>
 </template>
 
 <script>
+
 export default {
     name:'SignUp',
     data: function() {
         return{
-            
         }
     }
-
 }
 </script>
 
 <style>
 
 /* Containers */
+
 .imgInsideSignupContainer, .bgColorSignupContainer {
     position: absolute;
     width: 1440px;
@@ -78,15 +77,6 @@ export default {
     color: white;
 }
 
-/* Navigation */
-#navSectionWrapper {
-    position: absolute;
-    width: 1440px;
-    height: 100px;
-    left: 0px;
-    top: 17px;
-}
-
 /* Logo */
 #logoWrapper {
     position: absolute;
@@ -94,54 +84,88 @@ export default {
     height: 22px;
     left: 201px;
     top: 59px;
-    text-transform: uppercase;
+}
+
+#cloudLogo {
+    margin: 0 8px 0 0;
 }
 
 #logoWrapper h3 {
-    font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
 }
 
 /* Navbar*/
 
-#navbarWrapper {
+#navbarUl {
     position: absolute;
-    width: auto;
+    width: 545px;
     height: 22px;
     left: 498px;
     top: 58px;
-    text-transform: uppercase;
-}
-
-.b-nav-item {
+    list-style: none;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 14px;
     line-height: 17px;
     display: flex;
     align-items: center;
+    text-transform: uppercase;
+}
+
+#navbarUl li a {
+    padding: 0 10px;
+    color: white;
 }
 
 /* Language Dropdown */
 #langWrapper {
     position: absolute;
+    width: 96px;
+    height: 32px;
+    left: 1056px;
+    top: 51px;
+}
+
+#langFlag {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+}
+
+#dropdown-1 {
+    margin: 0 20px;
+    position: absolute;
     width: 32px;
     height: 22px;
-    left: 1099px;
-    top: 50px;
-}
-#dropdown-1 {
-    border: 1px solid #FFFFFF;
-    background: transparent;
+    left: 43px;
+    top: 0px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
 }
 
 /* Login Button */
 #loginBtnWrapper {
     position: absolute;
-    left: 580px;
+    width: 100px;
+    height: 40px;
+    left: 1172px;
     top: 50px;
+    font-weight: normal;
 }
 
 /* Login Button */
@@ -153,6 +177,12 @@ export default {
     box-sizing: border-box;
     border-radius: 6px;
     text-transform: uppercase;
+    font-size: 14px;
+    line-height: 17px;
+}
+#loginBtn:hover {
+    color: black;
+    background: white;
 }
 
 /* Title h1*/
@@ -165,7 +195,6 @@ export default {
 }
 
 #titleWrapper h1 {
-    font-style: normal;
     font-weight: bold;
     font-size: 72px;
     line-height: 86px;
@@ -177,16 +206,13 @@ export default {
 }
 
 /* Price Details p*/
-#detailWrapper {
+#detailWrapper p {
     position: absolute;
     width: 540px;
     height: 124px;
     left: 450px;
     top: 382px;
-}
-#detailWrapper p {
-    font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 24px;
     line-height: 150%;
     /* or 36px */
@@ -214,5 +240,11 @@ export default {
     font-size: 14px;
     line-height: 17px;
     border: none;
+}
+
+#signupBtn:hover {
+    border: 1px solid white;
+    background: transparent;
+    color: white;
 }
 </style>
