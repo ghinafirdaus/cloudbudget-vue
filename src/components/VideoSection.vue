@@ -46,6 +46,7 @@ export default {
     position: absolute;
     width: 445px;
     height: 107px;
+    left: 0;
 }
 
 .videoSectionLeftSide h2{ 

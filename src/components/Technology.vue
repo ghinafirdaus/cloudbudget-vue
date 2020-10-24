@@ -48,7 +48,7 @@ export default {
     position: absolute;
     width: 1440px;
     height: 500px;
-    left: 0px;
+    left: 0;
     top: 1942px;
     background: #FFFFFF;
 }
@@ -58,8 +58,8 @@ export default {
     position: absolute;
     width: 1110px;
     height: 55px;
-    left: 165px;
     top: 60px;
+    left: 165px;
     font-style: normal;
     font-weight: 600;
     font-size: 36px;
@@ -72,8 +72,8 @@ export default {
     position: absolute;
     width: 1110px;
     height: 226px;
-    left: 165px;
     top: 170px;
+    left: 165px;
 }
 
 .technologyPoint {

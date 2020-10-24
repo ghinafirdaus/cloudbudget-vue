@@ -17,7 +17,7 @@
                 <b-col id="langWrapper">
                     <div>
                         <b-img id="langFlag" src="../assets/en.png" alt="en image"></b-img>
-                        <b-dropdown id="dropdown-1" text="EN" variant="outline-light" class="m-md-2">
+                        <b-dropdown id="dropdown-1" variant="outline-light border-0" text="EN" class="m-md-2">
                             <b-dropdown-item active href="#">EN</b-dropdown-item>
                             <b-dropdown-item href="#">ID</b-dropdown-item>
                         </b-dropdown>
@@ -82,7 +82,7 @@ export default {
     position: absolute;
     width: 136px;
     height: 22px;
-    left: 201px;
+    left: 155px;
     top: 59px;
 }
 
@@ -109,7 +109,7 @@ export default {
     position: absolute;
     width: 545px;
     height: 22px;
-    left: 498px;
+    left: 478px;
     top: 58px;
     list-style: none;
     font-style: normal;
@@ -122,6 +122,7 @@ export default {
 }
 
 #navbarUl li a {
+    text-transform: uppercase;
     padding: 0 10px;
     color: white;
 }
@@ -139,6 +140,7 @@ export default {
     position: absolute;
     width: 32px;
     height: 32px;
+    top: 3px;
 }
 
 #dropdown-1 {
@@ -154,8 +156,6 @@ export default {
     display: flex;
     align-items: center;
     text-transform: uppercase;
-
-    color: #FFFFFF;
 }
 
 /* Login Button */
@@ -181,7 +181,7 @@ export default {
     line-height: 17px;
 }
 #loginBtn:hover {
-    color: black;
+    color:#ED4C5C;
     background: white;
 }
 

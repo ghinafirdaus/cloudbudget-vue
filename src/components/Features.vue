@@ -73,21 +73,22 @@ export default {
 /* Features: Bottom Side */
 .featuresBottom {
     position: absolute;
-    width: 1440px;
+    margin:auto;
+    width: 1200px;
     height: 660px;
-    left: 0px;
+    left: 165px;
     top: 0px;
 }
 .featuresItems {
     width: 300px;
     height: 500px;
-    margin: 0 30px;
+    margin: 0;
 }
 .featuresItems img {
     position: absolute;
     width: 350px;
     height: 250px;
-    left: 30px;
+    left: 0;
     top: 181px;
 }
 
@@ -95,7 +96,7 @@ export default {
     position: absolute;
     width: 293px;
     height: 198px;
-    left: 72px;
+    left: 42px;
     top: 338px;
     background: #FFFFFF;
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
